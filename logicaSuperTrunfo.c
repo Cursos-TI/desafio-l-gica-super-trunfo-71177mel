@@ -3,21 +3,21 @@
 
 int main() {
     // ====== Declaração de variáveis da Carta 1 ======
-    char pais_c1[30], codigo_c1[10], cidade_c1[30];
+    char estado_c1[30], codigo_c1[10], cidade_c1[30];
     unsigned long int populacao_c1;
     float area_c1, pib_c1, densidade_c1, pib_per_capita_c1;
     int pontos_turisticos_c1;
 
     // ====== Declaração de variáveis da Carta 2 ======
-    char pais_c2[30], codigo_c2[10], cidade_c2[30];
+    char estado_c2[30], codigo_c2[10], cidade_c2[30];
     unsigned long int populacao_c2;
     float area_c2, pib_c2, densidade_c2, pib_per_capita_c2;
     int pontos_turisticos_c2;
 
     // ===== Entrada de dados para Carta 1 =====
     printf("=== Cadastro da CARTA 1 ===\n");
-    printf("Digite o nome do pais: ");
-    scanf("%s", pais_c1);
+    printf("Digite o nome do estado: ");
+    scanf("%s", estado_c1);
 
     printf("Digite o codigo: ");
     scanf("%s", codigo_c1);
@@ -43,8 +43,8 @@ int main() {
 
     // ===== Entrada de dados para Carta 2 =====
     printf("\n=== Cadastro da CARTA 2 ===\n");
-    printf("Digite o nome do pais: ");
-    scanf("%s", pais_c2);
+    printf("Digite o nome do estado: ");
+    scanf("%s", estado_c2);
 
     printf("Digite o codigo: ");
     scanf("%s", codigo_c2);
@@ -80,41 +80,41 @@ int main() {
     scanf("%d", &opcao);
 
     // ===== Lógica de comparação =====
-    printf("\nComparando %s e %s\n", pais_c1, pais_c2);
+    printf("\nComparando %s e %s\n", estado_c1, estado_c2);
 
     switch (opcao) {
         case 1: // População
             printf("Populacao: %lu x %lu\n", populacao_c1, populacao_c2);
-            if (populacao_c1 > populacao_c2) printf("Vencedor: %s\n", pais_c1);
-            else if (populacao_c2 > populacao_c1) printf("Vencedor: %s\n", pais_c2);
+            if (populacao_c1 > populacao_c2) printf("Vencedor: %s\n", estado_c1);
+            else if (populacao_c2 > populacao_c1) printf("Vencedor: %s\n", estado_c2);
             else printf("Empate!\n");
             break;
 
         case 2: // Área
             printf("Area: %.2f km² x %.2f km²\n", area_c1, area_c2);
-            if (area_c1 > area_c2) printf("Vencedor: %s\n", pais_c1);
-            else if (area_c2 > area_c1) printf("Vencedor: %s\n", pais_c2);
+            if (area_c1 > area_c2) printf("Vencedor: %s\n", estado_c1);
+            else if (area_c2 > area_c1) printf("Vencedor: %s\n", estado_c2);
             else printf("Empate!\n");
             break;
 
         case 3: // PIB
             printf("PIB: %.2f x %.2f\n", pib_c1, pib_c2);
-            if (pib_c1 > pib_c2) printf("Vencedor: %s\n", pais_c1);
-            else if (pib_c2 > pib_c1) printf("Vencedor: %s\n", pais_c2);
+            if (pib_c1 > pib_c2) printf("Vencedor: %s\n", estado_c1);
+            else if (pib_c2 > pib_c1) printf("Vencedor: %s\n", estado_c2);
             else printf("Empate!\n");
             break;
 
         case 4: // Pontos turísticos
             printf("Pontos turisticos: %d x %d\n", pontos_turisticos_c1, pontos_turisticos_c2);
-            if (pontos_turisticos_c1 > pontos_turisticos_c2) printf("Vencedor: %s\n", pais_c1);
-            else if (pontos_turisticos_c2 > pontos_turisticos_c1) printf("Vencedor: %s\n", pais_c2);
+            if (pontos_turisticos_c1 > pontos_turisticos_c2) printf("Vencedor: %s\n", estado_c1);
+            else if (pontos_turisticos_c2 > pontos_turisticos_c1) printf("Vencedor: %s\n", estado_c2);
             else printf("Empate!\n");
             break;
 
         case 5: // Densidade demográfica (menor vence)
             printf("Densidade demografica: %.2f hab/km² x %.2f hab/km²\n", densidade_c1, densidade_c2);
-            if (densidade_c1 < densidade_c2) printf("Vencedor: %s (menor densidade)\n", pais_c1);
-            else if (densidade_c2 < densidade_c1) printf("Vencedor: %s (menor densidade)\n", pais_c2);
+            if (densidade_c1 < densidade_c2) printf("Vencedor: %s (menor densidade)\n", estado_c1);
+            else if (densidade_c2 < densidade_c1) printf("Vencedor: %s (menor densidade)\n", estado_c2);
             else printf("Empate!\n");
             break;
 
